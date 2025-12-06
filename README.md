@@ -4,10 +4,15 @@
 **Course:** CAS2105 — Homework 6
 
 ## 1. Introduction
-**Task:** Classify news headlines into four categories: `World`, `Sports`, `Business`, and `Sci/Tech` using the AG News dataset.  
-**Motivation:** Quick and reliable headline classification is useful for news aggregation, topic routing, personalized feeds, and automated content moderation. This project emphasizes the AI pipeline process: problem definition, baseline, model pipeline, evaluation, and reflection. It demonstrates the workflow of developing and comparing simple AI methods on a real dataset.
+This project investigates a compact AI pipeline for classifying news headlines. News headline classification was chosen as the focus because it is a tangible, widely applicable problem: accurate topic classification is essential for news aggregators, recommendation engines, and automated content moderation systems.
+
+The AG News dataset was selected for its public availability, structured format, and suitability for fast experimentation on a manageable subset. The project compares a naïve baseline (keyword-based) with an AI pipeline (MiniLM embeddings + Logistic Regression), demonstrating the advantages of semantic embeddings over simple heuristic approaches. The AI pipeline uses MiniLM embeddings combined with a logistic regression classifier, chosen for their efficiency, ease of use, and ability to capture semantic meaning without heavy fine-tuning.
+
+Overall, this project emphasizes the AI workflow: defining the problem, designing a baseline, building an improved pipeline, evaluating results, and reflecting on outcomes. The pipeline is lightweight, reproducible, and interpretable, capable of running efficiently on a single GPU or CPU.
 
 ## 2. Task Definition
+**Task:** Classify news headlines into four categories: `World`, `Sports`, `Business`, and `Sci/Tech` using the AG News dataset.  
+**Motivation:** Quick and reliable headline classification is useful for news aggregation, topic routing, personalized feeds, and automated content moderation. This project emphasizes the AI pipeline process: problem definition, baseline, model pipeline, evaluation, and reflection. It demonstrates the workflow of developing and comparing simple AI methods on a real dataset.
 **Input:** Single short news headline (text).  
 **Output:** One of four labels {World, Sports, Business, Sci/Tech}.  
 **Success criteria:** High classification accuracy and balanced macro F1 across classes on held-out test data. The system should be reproducible and interpretable for quick experimentation.
