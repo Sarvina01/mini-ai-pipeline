@@ -1,6 +1,6 @@
 # Mini AI Pipeline: News Headline Classification (AG News)
 
-**Author:** <A/P SATHESKUMAR SARVINA> (Student ID: <2024148001>)  
+**Author:** A/P SATHESKUMAR SARVINA (Student ID: 2024148001)  
 **Course:** CAS2105 — Homework 6
 
 ## 1. Introduction
