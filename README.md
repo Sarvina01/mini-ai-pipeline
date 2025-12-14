@@ -15,7 +15,7 @@ Overall, this project emphasizes the AI workflow: **defining the problem, design
 Overall, this project emphasizes the AI workflow: defining the problem, designing a baseline, building an improved pipeline, evaluating results, and reflecting on outcomes. The pipeline is lightweight, reproducible, and interpretable, capable of running efficiently on a single GPU or CPU.
 
 ## 2. Task Definition
-**Task:** Classify news headlines into four categories: `World`, `Sports`, `Business`, and `Sci/Tech` using the AG News dataset.  
+### **Task:** Classify news headlines into four categories: `World`, `Sports`, `Business`, and `Sci/Tech` using the AG News dataset.  
 **Motivation:** Quick and reliable headline classification is useful for news aggregation, topic routing, personalized feeds, and automated content moderation. This project emphasizes the AI pipeline process: problem definition, baseline, model pipeline, evaluation, and reflection. It demonstrates the workflow of developing and comparing simple AI methods on a real dataset.
 **Input:** Single short news headline (text).  
 **Output:** One of four labels {World, Sports, Business, Sci/Tech}.  
