@@ -55,10 +55,10 @@ Overall, this project emphasizes the AI workflow: defining the problem, designin
 **Models used:** `sentence-transformers/all-MiniLM-L6-v2` to compute sentence embeddings; `sklearn.LogisticRegression` as a classifier.  
 
 **Pipeline stages:**
-    **1. Preprocessing:** raw headlines (tokenization handled internally by the embedding model).
-    **2. Embedding:** encode each headline into a 384-dim vector (MiniLM).
-    **3. Classifier:** logistic regression trained on embeddings.
-    **4. Post-processing:** predicted label mapping back to text.
+- **1. Preprocessing:** raw headlines (tokenization handled internally by the embedding model).
+- **2. Embedding:** encode each headline into a 384-dim vector (MiniLM).
+- **3. Classifier:** logistic regression trained on embeddings.
+- **4. Post-processing:** predicted label mapping back to text.
 
 **Design choices & Justification:** Embeddings+linear classifier is inference-light, reproducible, and effective for short texts without fine-tuning. It meets the constraint to run comfortably on CPU.
 
