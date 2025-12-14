@@ -40,14 +40,20 @@ Overall, this project emphasizes the AI workflow: defining the problem, designin
 
 ### 4.1 Naïve Baseline
 **Method description:** Keyword-based classifier, means each class has a curated list of keywords. Headlines are scored by keyword occurrences and assigned to the highest-scoring class. Ties or zero matches are resolved deterministically. 
+
 **Why naïve:** It ignores semantics, word order, and polysemy. Cannot handle synonyms or paraphrased expressions. 
+
 **Limitations / failure modes::** 
-    - Fails on ambiguous headlines or headlines without keywords.
-    - Sensitive to word choice; minor changes in phrasing can drastically alter predictions.
-    - Example: “NASA launches new Mars rover” → baseline predicts `World` instead of `Sci/Tech`.
+
+- Fails on ambiguous headlines or headlines without keywords.
+
+- Sensitive to word choice; minor changes in phrasing can drastically alter predictions.
+
+- Example: “NASA launches new Mars rover” → baseline predicts `World` instead of `Sci/Tech`.
 
 ### 4.2 AI Pipeline
 **Models used:** `sentence-transformers/all-MiniLM-L6-v2` to compute sentence embeddings; `sklearn.LogisticRegression` as a classifier.  
+
 **Pipeline stages:**
     **1. Preprocessing:** raw headlines (tokenization handled internally by the embedding model).
     **2. Embedding:** encode each headline into a 384-dim vector (MiniLM).
@@ -57,7 +63,8 @@ Overall, this project emphasizes the AI workflow: defining the problem, designin
 **Design choices & Justification:** Embeddings+linear classifier is inference-light, reproducible, and effective for short texts without fine-tuning. It meets the constraint to run comfortably on CPU.
 
 ## 5. Experiments & Results
-**Metrics:** Accuracy, Precision (macro), Recall (macro), F1 (macro).  
+**Metrics:** Accuracy, Precision (macro), Recall (macro), F1 (macro). 
+
 **Results table** (computed by running the notebook):
 
 | Method                  | Accuracy | Precision (macro) | Recall (macro) | F1 (macro) | Notes                                                         |
@@ -77,13 +84,18 @@ Overall, this project emphasizes the AI workflow: defining the problem, designin
 
 ## 6. Reflection & Limitations
 - **Successes:** The embedding + logistic regression pipeline significantly outperforms the baseline, handling paraphrased headlines and synonyms effectively.
+
 - **Challenges:** Baseline fails on short, ambiguous, or synonym-rich headlines. Some classes (e.g., World vs Business) overlap conceptually, causing occasional misclassification.
+
 - **Metric suitability:** Accuracy and macro F1 are appropriate for this balanced subset. For imbalanced datasets, per-class breakdowns or micro-averaged metrics would be more informative.
+
 - **Future work:** Fine-tune a small transformer classifier on the full AG News dataset, expand baseline keyword coverage, explore ensemble methods, or deploy as a lightweight API.
 
 ## 7. Reproducibility & Use
 - **Notebook:** `notebooks/pipeline_demo.ipynb` reproduces all steps.
+
 - **Requirements:** `requirements.txt` includes necessary dependencies.
+
 - **Artifacts:** Trained model and embeddings can be saved under `artifacts/` if saving steps are run.
 
 ## 8. References
