@@ -31,7 +31,7 @@ Overall, this project emphasizes the AI workflow: defining the problem, designin
 ## 4. Methods
 
 ### 4.1 Naïve Baseline
-**Method description:** Keyword-based classifier — each class has a curated list of keywords. Headlines are scored by keyword occurrences and assigned to the highest-scoring class. Ties or zero matches are resolved deterministically. 
+**Method description:** Keyword-based classifier, means each class has a curated list of keywords. Headlines are scored by keyword occurrences and assigned to the highest-scoring class. Ties or zero matches are resolved deterministically. 
 **Why naïve:** It ignores semantics, word order, and polysemy. Cannot handle synonyms or paraphrased expressions. 
 **Limitations / failure modes::** 
     - Fails on ambiguous headlines or headlines without keywords.
