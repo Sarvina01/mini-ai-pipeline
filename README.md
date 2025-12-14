@@ -4,9 +4,13 @@
 **Course:** CAS2105 — Homework 6
 
 ## 1. Introduction
-This project investigates a compact AI pipeline for classifying news headlines. News headline classification was chosen as the focus because it is a tangible, widely applicable problem: accurate topic classification is essential for news aggregators, recommendation engines, and automated content moderation systems.
+This project explores a small AI pipeline for classifying news headlines. The chosen task is **news headline classification**, where each headline is assigned to one of four categories: `World`, `Sports`, `Business`, or `Sci/Tech.`
 
-The AG News dataset was selected for its public availability, structured format, and suitability for fast experimentation on a manageable subset. The project compares a naïve baseline (keyword-based) with an AI pipeline (MiniLM embeddings + Logistic Regression), demonstrating the advantages of semantic embeddings over simple heuristic approaches. The AI pipeline uses MiniLM embeddings combined with a logistic regression classifier, chosen for their efficiency, ease of use, and ability to capture semantic meaning without heavy fine-tuning.
+This task is interesting because accurate headline classification is widely applicable: it supports news aggregators, recommendation engines, and automated content moderation. It also illustrates the difference between simple heuristics and modern embedding-based approaches.
+
+The project uses the **AG News dataset** due to its public availability, structured format, and suitability for fast experimentation on a manageable subset. We compare a naïve baseline* (keyword-based) with an **AI pipeline** (MiniLM embeddings + Logistic Regression), highlighting the benefits of semantic embeddings.
+
+Overall, this project emphasizes the AI workflow: **defining the problem, designing a baseline, building an improved pipeline, evaluating results, and reflecting on outcomes.** The pipeline is lightweight, reproducible, and interpretable, capable of running efficiently on a single GPU or CPU.
 
 Overall, this project emphasizes the AI workflow: defining the problem, designing a baseline, building an improved pipeline, evaluating results, and reflecting on outcomes. The pipeline is lightweight, reproducible, and interpretable, capable of running efficiently on a single GPU or CPU.
 
